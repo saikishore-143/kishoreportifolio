@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Kishore Mogili | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #14171c;
+      color: #fff;
+    }
+    .header {
+      /* position: fixed; */
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: default;
+      opacity: 0;
+      animation: slideRight 1s ease forwards;
+    }
+    .navbar a {
+      display: inline-block;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 35px;
+      cursor: default;
+      transition: .3s;
+      animation: slideTop 5s ease forwards;
+      animation-delay: calc(.1s * var(--i));
+    }
+    .navbar a:hover,
+    .navbar a.active {
+      color: #0ef;
+    }
+    .home {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 70px 10% 0;
+    }
+    .home-content {
+      max-width: 600px;
+    }
+    .home-content h3 {
+      font-size: 32px;
+      font-weight: 700;
+      opacity: 0;
+      animation: slideBottom 1s ease forwards;
+      animation-delay: .7s;
+    }
+    .home-content h3:nth-of-type(2) {
+      margin-bottom: 30px;
+      animation: slideTop 1s ease forwards;
+      animation-delay: .7s;
+    }
+    .home-content h3 span {
+      color: #0ef;
+    }
+    .home-content h1 {
+      font-size: 56px;
+      font-weight: 700;
+      margin: -3px 0;
+      opacity: 0;
+      animation: slideRight 1s ease forwards;
+      animation-delay: 1s;
+    }
+    .home-content p {
+      font-size: 16px;
+      opacity: 0;
+      animation: slideLeft 1s ease forwards;
+      animation-delay: 1s;
+    }
+    .home-img img {
+      max-width: 300px;
+      margin-right: -20px;
+      border-radius: 50%;
+      opacity: 0;
+      animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+      animation-delay: 2s, 3s;
+    }
+    .social-media a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #0ef;
+      border-radius: 50%;
+      font-size: 20px;
+      color: #0ef;
+      text-decoration: none;
+      margin: 30px 15px 30px 0;
+      transition: .5s ease;
+      opacity: 0;
+      animation: slideLeft 1s ease forwards;
+      animation-delay: calc(.2s * var(--i));
+    }
+    .social-media a:hover {
+      background: #0ef;
+      color: #1f242d;
+      box-shadow: 0 0 20px #0ef;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px;
+      background: #0ef;
+      border-radius: 40px;
+      box-shadow: 0 0 10px #0ef;
+      font-size: 16px;
+      color: #1f242d;
+      letter-spacing: 1px;
+      text-decoration: none;
+      font-weight: 600;
+      opacity: 0;
+      animation: slideTop 1s ease forwards;
+      animation-delay: 2s;
+    }
+    @keyframes slideRight {
+      0% { transform: translateX(-100px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideLeft {
+      0% { transform: translateX(100px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideTop {
+      0% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideBottom {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes zoomIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes floatImage {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <a href="#" class="logo">Sai Kishore</a>
+  <nav class="navbar">
+    <a href="#" class="active" style="--i:1;">Home</a>
+    <a href="#about" style="--i:2;">About</a>
+    <a href="#skills" style="--i:3;">Skills</a>
+    <a href="#projects" style="--i:4;">Projects</a>
+    <a href="#contact" style="--i:5;">Contact</a>
+  </nav>
+</header>
+
+<section class="home">
+  <div class="home-content">
+    <h3>Hello, It's Me</h3>
+    <h1>Sai Kishore Mogili</h1>
+    <h3>And I'm a <span>Front-End Developer</span></h3>
+    <p>A passionate B.Tech student specializing in web development with expertise in React, JavaScript, and responsive UI design.</p>
+    <div class="social-media">
+      <a href="mailto:mglsaikishore999@gmail.com" style="--i:6;"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+917997675360" style="--i:7;"><i class="fas fa-phone"></i></a>
+      <a href="https://www.linkedin.com/in/sai-kishore-mogili-61b67b305/" target="_blank" style="--i:8;"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/saikishore-143" target="_blank" style="--i:9;"><i class="fab fa-github"></i></a>
+      <a href="https://leetcode.com/u/KISHOREMOGILI/" target="_blank" style="--i:10;"><i class="fas fa-code"></i></a>
+    </div>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
+  <div class="home-img">
+    <img src="C:\Users\SAI KISHORE\OneDrive\Pictures\WhatsApp Image 2025-07-31 at 21.48.35_0b139d0d.jpg" alt="Sai Kishore">
+  </div>
+</section>
+
+<section id="about" style="padding: 80px 10% 40px;">
+  <h2 style="font-size: 36px; color: #0ef; margin-bottom: 20px;">About Me</h2>
+  <p style="font-size: 18px; line-height: 1.6;">I'm currently pursuing my B.Tech in Computer Science at Raghu Engineering College, Visakhapatnam, expected to graduate in 2026. I enjoy crafting responsive websites that provide intuitive user experiences. My focus is on front-end development using technologies like HTML, CSS, JavaScript, and React.</p>
+</section>
+
+<section id="skills" style="padding: 60px 10% 40px;">
+  <h2 style="font-size: 36px; color: #0ef; margin-bottom: 20px;">Skills</h2>
+  <ul style="list-style: none; padding-left: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Python</li>
+    <li>C++</li>
+    <li>Operating Systems</li>
+    <li>Computer Networks</li>
+    <li>Data Structures & Algorithms</li>
+  </ul>
+</section>
+
+<section id="projects" style="padding: 60px 10% 40px;">
+  <h2 style="font-size: 36px; color: #0ef; margin-bottom: 20px;">Projects</h2>
+  <div>
+    <h3>Real-Time Weather App</h3>
+    <p>A web application that fetches real-time weather updates from an API and displays temperature, humidity, and condition icons based on location.</p>
+  </div>
+  <div style="margin-top: 20px;">
+    <h3>Portfolio Website</h3>
+    <p>Responsive and animated personal portfolio website to showcase skills and projects using HTML, CSS, and JavaScript.</p>
+  </div>
+</section>
+
+<section id="contact" style="padding: 60px 10% 100px;">
+  <h2 style="font-size: 36px; color: #0ef; margin-bottom: 20px;">Contact</h2>
+  <form action="#" method="POST" style="max-width: 600px; display: flex; flex-direction: column; gap: 15px;">
+    <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 6px; border: none; outline: none;" />
+    <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border-radius: 6px; border: none; outline: none;" />
+    <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 12px; border-radius: 6px; border: none; outline: none;"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+<script>
+  // Smooth scroll for navigation links
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Contact form submission alert
+  document.querySelector('form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you! Your message has been received.');
+    this.reset();
+  });
+</script>
+</body>
+</html>
